@@ -12,12 +12,12 @@ for i in range(5):
 ## OR
 
 # list comprehension ?
-fnames = ['g{}.png'.format(i) for i in range(5)]
+fnames = ['sprites/g{}.png'.format(i) for i in range(5)]
 
 ## or
-fnames = ['g%d.png' %(i) for i in range(5)]
+fnames = ['sprites/g%d.png' %(i) for i in range(5)]
 
-for i in range(10):
+for i in range(50):
     for fname in fnames:
         s.load_image(fname)
         time.sleep(0.1)
