@@ -11,7 +11,7 @@ maybe ...
 
 <hr>
 
-### Hints:
+### Notes:
 
 **Install additional needed programs/libraries**
 
@@ -26,7 +26,7 @@ pip3 install lxml
 may also need `requets`?
 
 
-**Install VS Code on RPi:**
+**Install [VS Code](https://code.visualstudio.com/) on RPi:**
 ```
 sudo . <( wget -O - https://code.headmelted.com/installers/apt.sh )
 ```
