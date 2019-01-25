@@ -11,10 +11,9 @@ for i in range(5):
 
 ## OR
 
-# list comprehension ?
+# list comprehension
 fnames = ['sprites/g{}.png'.format(i) for i in range(5)]
-
-## or
+# or
 fnames = ['sprites/g%d.png' %(i) for i in range(5)]
 
 for i in range(50):
