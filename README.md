@@ -16,7 +16,7 @@ maybe ...
 **Install additional needed programs/libraries**
 
 ```
-sudo apt install python3, ipython3, pip3
+sudo apt install python3, ipython3, python3-pip
 ```
 
 ```
