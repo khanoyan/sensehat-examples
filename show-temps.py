@@ -4,12 +4,9 @@ from sense_hat import SenseHat
 import time
 import numpy as np
 
-s = SenseHat()
-
-s.clear()
-
 from bs4 import BeautifulSoup
 import requests
+
 
 def c2f(degC):
     return degC * 1.8 + 32
@@ -24,15 +21,18 @@ def displayLED(insideTemp, outsideTemp):
         back_colour=[127,127,127],
         text_colour=[0,0,0])
 
-resp = requests.get('http://w1.weather.gov/xml/current_obs/KBUR.xml')
 
+s = SenseHat()
+s.clear()
+
+resp = requests.get('http://w1.weather.gov/xml/current_obs/KBUR.xml')
 soup = BeautifulSoup(resp.text, 'lxml')
 
 allTags = soup.findAll(True)
 allTagNames = [tag.name for tag in allTags]
 allTagValues = [tag.string for tag in allTags]
 
-# fetch outside temp only once (for now)
+# fetch outside temp only once 
 outsideTemp = float(soup.temp_f.string)
 
 while True:
